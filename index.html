@@ -5,8 +5,25 @@
     <title></title>
   </head>
   <body>
-    <video src="video/videoplayback.mp4" autoplay controls="posterimage.jpg">
-
-    </video>
+    <header style="font-size:30px;text-align:center;font-family:elephant">VIDEO CONTROLLER </header>
+    <center><video id="vid" src="video/videoplayback.mp4" autoplay controls="controls" loop>
+  </video></center><br>
+  <center><button type="button" name="button" onclick="play()">play</button>
+  <button type="button" name="button" onclick="pause()">pause</button></center><br><br>
+  <header style="font-size:30px;text-align:center;font-family:elephant">AUDIO CONTROLLER </header>
+   <center><audio src="audio/audio1.wav" autoplay controls="controls">
+  </audio></center><br><br>
+  <center><button type="button" name="button" onclick="play()">play</button>
+  <button type="button" name="button" onclick="pause()">pause</button></center>
   </body>
+  <script type="text/javascript">
+  function pause(){
+  var video=document.getElementById("vid");
+    video.pause();
+  }
+  function play(){
+    var video=document.getElementById("vid");
+    video.play();
+  }
+    </script>
 </html>
